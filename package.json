@@ -7,5 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BloodRedCodr",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "esbuild": "0.24.2",
+    "typescript": "5.7.2"
+  }
 }
