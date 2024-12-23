@@ -4,6 +4,8 @@
   "description": "React App Template",
   "main": "index.js",
   "scripts": {
+    "dev": "NODE_ENV=development node build.js",
+    "build": "NODE_ENV=production node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BloodRedCodr",
@@ -16,6 +18,7 @@
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "esbuild": "0.24.2",
+    "ncp": "2.0.0",
     "typescript": "5.7.2"
   }
 }
