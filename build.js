@@ -21,10 +21,11 @@ const esbuildOptions = {
   },
   write: false,
   plugins: [
-    !isDev && compress({
-      brotli: true,
-      gzip: true,
-    }),
+    !isDev &&
+      compress({
+        brotli: true,
+        gzip: true,
+      }),
   ].filter(Boolean),
 };
 
