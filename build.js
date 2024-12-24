@@ -1,12 +1,15 @@
 import * as esbuild from 'esbuild';
+import { compress } from 'esbuild-plugin-compress';
 import ncp from 'ncp';
 
-const isDev = process.env.NODE_ENV === 'development';
+const env = process.env.NODE_ENV || 'development';
+const isDev = env === 'development';
 
 const esbuildOptions = {
   entryPoints: ['./src/index.tsx'],
   bundle: true,
   outdir: 'dist/js',
+  target: 'esnext',
   loader: {
     '.tsx': 'tsx',
     '.ts': 'ts',
@@ -14,11 +17,15 @@ const esbuildOptions = {
   sourcemap: isDev,
   minify: !isDev,
   define: {
-    'process.env.NODE_ENV': JSON.stringify(
-      process.env.NODE_ENV || 'development',
-    ),
+    'process.env.NODE_ENV': JSON.stringify(env),
   },
-  target: 'esnext',
+  write: false,
+  plugins: [
+    !isDev && compress({
+      brotli: true,
+      gzip: true,
+    }),
+  ].filter(Boolean),
 };
 
 const build = async () => {

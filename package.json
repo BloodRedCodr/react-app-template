@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React App Template",
   "main": "index.js",
-  "type": "module" ,
+  "type": "module",
   "scripts": {
     "prepare": "husky",
     "format": "prettier --write '**/*.{ts,tsx,js,mjs}'",
@@ -26,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "8.18.2",
     "@typescript-eslint/parser": "8.18.2",
     "esbuild": "0.24.2",
+    "esbuild-plugin-compress": "1.0.1",
     "eslint": "9.17.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
