@@ -1,5 +1,8 @@
 # react-app-template
-The template app with React + TypeScript + ESBuild + Husky + Prettier + ESLint
+The React template app with support of below configs:
+  - TypeScript
+  - ESBuild + Brotli/Gzip compression
+  - Husky + Prettier + ESLint
 
 # Local development setup:
   1. Install nvm (Node Version Manager)
