@@ -41,15 +41,15 @@ const build = async () => {
 
     if (isDev) {
       let ctx = await esbuild.context(esbuildOptions);
-  
+
       let { host, port } = await ctx.serve({
         servedir: 'dist',
       });
       console.log(`server running on ${host}:${port}`);
-    
+
       await ctx.watch();
       console.log('watching...');
-    }  
+    }
   });
 };
 
