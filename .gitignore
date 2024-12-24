@@ -1,2 +1,15 @@
-node_modules
-dist
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+
+npm-debug.log*
+**/.DS_Store
+
+# Build generated files
+**/dist/
+
+# coverage
+**/coverage
+
+.env
