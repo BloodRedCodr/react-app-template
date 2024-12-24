@@ -14,7 +14,9 @@ const esbuildOptions = {
   sourcemap: isDev,
   minify: !isDev,
   define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    'process.env.NODE_ENV': JSON.stringify(
+      process.env.NODE_ENV || 'development',
+    ),
   },
   target: 'esnext',
 };
@@ -49,7 +51,7 @@ const serve = async () => {
 
   await ctx.watch();
   console.log('watching...');
-}
+};
 
 if (isDev) {
   serve().catch((err) => {
