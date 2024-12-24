@@ -7,8 +7,8 @@
   "scripts": {
     "prepare": "husky",
     "format": "prettier --write '**/*.{ts,tsx,js,mjs}'",
-    "dev": "NODE_ENV=development node build.js",
-    "build": "NODE_ENV=production node build.js",
+    "dev": "NODE_ENV=development node esbuild.config.mjs",
+    "build": "NODE_ENV=production node esbuild.config.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BloodRedCodr",
